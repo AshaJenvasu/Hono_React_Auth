@@ -3,7 +3,11 @@
   "scripts": {
     "server": "bun run --hot server/index.ts",
     "client": "cd client && bun run dev",
-    "dev": "concurrently \"bun run server\" \"bun run client\" "
+    "dev": "concurrently \"bun run server\" \"bun run client\" ",
+    "db:up": "docker compose up -d",
+    "db:generate": "prisma generate",
+    "db:migrate": "bunx prisma migrate dev --name init",
+    "db:studio": "prisma studio"
   },
   "dependencies": {
     "hono": "^4.13.8"
