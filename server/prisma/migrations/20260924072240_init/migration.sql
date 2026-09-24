@@ -1,0 +1,11 @@
+-- CreateTable
+CREATE TABLE "Todos" (
+    "id" UUID NOT NULL,
+    "title" VARCHAR(500) NOT NULL,
+    "description" VARCHAR(1000),
+    "completed" BOOLEAN NOT NULL DEFAULT false,
+    "createdAt" TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "Todos_pkey" PRIMARY KEY ("id")
+);
